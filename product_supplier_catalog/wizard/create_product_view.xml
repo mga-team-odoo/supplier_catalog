@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_create_supplier_product_form" model="ir.ui.view">
+            <field name="name">create.supplier.product.form</field>
+            <field name="model">create.supplier.product</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Create supplier product" version="7.0">
+                    <group colspan="4">
+                        <field name="categ_id"/>
+                    </group>
+                    <footer>
+                        <button icon="gtk-cancel" type="special" special="cancel" string="Cancel"/>
+                        <button icon="gtk-ok" string="Create or update product"
+                            name="create_or_update_product" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_create_supplier_product_view">
+            <field name="name">Create supplier product</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">create.supplier.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.values" id="wizard_create_supplier_product">
+            <field name="name">Create supplier product</field>
+            <field name="object" eval="1"/>
+            <field name="key">action</field>
+            <field name="key2">client_action_multi</field>
+            <field name="model">product.supplier.catalog</field>
+            <field name="value" eval="'ir.actions.act_window,' + str(ref('action_create_supplier_product_view'))" />
+        </record>
+
+    </data>
+</openerp>

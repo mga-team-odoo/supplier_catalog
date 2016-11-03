@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        ##############################################################################
+        #
+        #    product_supplier_catalog module for OpenERP, Module to import supplier catalog
+        #    Copyright (C) 2016 MIROUNGA ([http://www.mirounga.fr/]) 
+        #              Christophe CHAUVET [christophe.chauvet@gmail.com]
+        #
+        #    This file is a part of product_supplier_catalog
+        #
+        #    product_supplier_catalog is free software: you can redistribute it and/or modify
+        #    it under the terms of the GNU Affero General Public License as published by
+        #    the Free Software Foundation, either version 3 of the License, or
+        #    (at your option) any later version.
+        #
+        #    product_supplier_catalog is distributed in the hope that it will be useful,
+        #    but WITHOUT ANY WARRANTY; without even the implied warranty of
+        #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        #    GNU Affero General Public License for more details.
+        #
+        #    You should have received a copy of the GNU Affero General Public License
+        #    along with this program.  If not, see [http://www.gnu.org/licenses/].
+        #
+        ##############################################################################
+
+        <record id="view_product_supplier_catalog_tree" model="ir.ui.view">
+            <field name="name">product.supplier.catalog.tree</field>
+            <field name="model">product.supplier.catalog</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Catalogs">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="ean13"/>
+                    <field name="manufacturer_id"/>
+                    <field name="public_price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_product_supplier_catalog_form" model="ir.ui.view">
+            <field name="name">product.supplier.catalog.form</field>
+            <field name="model">product.supplier.catalog</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Catalogs">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="ean13"/>
+                    <field name="uom_id"/>
+                    <field name="manufacturer_id"/>
+                    <field name="weight"/>
+                    <field name="weight_net"/>
+                    <field name="date_eol"/>
+                    <field name="warranty"/>
+                    <field name="public_price"/>
+                    <field name="product_id"/>
+                    <notebook colspan="4">
+                        <page string="Informations">
+                            <separator string="Description" colspan="4"/>
+                            <field name="description" colspan="4" nolabel="1"/>
+                            <separator string="Suppliers" colspan="4"/>
+                            <field name="line_ids" colspan="4" nolabel="1">
+                                <tree string="Label" nolabel="1" editable="bottom">
+                                    <field name="supplier_id" domain="[('supplier','=', True)]"/>
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="sku"/>
+                                    <field name="min_qty"/>
+                                    <field name="purchase_price"/>
+                                    <field name="delay"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Categories">
+                            <field name="category_ids" nolabel="1">
+                                <tree string="Categories" colspan="4" nolabel="1">
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_product_supplier_catalog_search" model="ir.ui.view">
+            <field name="name">product.supplier.catalog.search</field>
+            <field name="model">product.supplier.catalog</field>
+            <field name="type">search</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Catalogs">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="manufacturer_id"/>
+                    <field name="ean13"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_product_supplier_catalog_view">
+            <field name="name">Catalogs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.supplier.catalog</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_product_supplier_catalog_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_product_supplier_catalog_view_form">
+            <field name="act_window_id" ref="act_open_product_supplier_catalog_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_product_supplier_catalog_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_product_supplier_catalog_view_tree">
+            <field name="act_window_id" ref="act_open_product_supplier_catalog_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_product_supplier_catalog_tree"/>
+        </record>
+
+        <menuitem id="menu_product_supplier_catalog"
+            parent="purchase.menu_procurement_management_product"
+            sequence="20"
+            action="act_open_product_supplier_catalog_view"/>
+
+        <record id="view_product_catagory_form" model="ir.ui.view">
+            <field name="name">product.category.form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref=""/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="compute_coeff"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
