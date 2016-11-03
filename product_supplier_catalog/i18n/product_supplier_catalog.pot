@@ -1,0 +1,334 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* product_supplier_catalog
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-03 07:15+0000\n"
+"PO-Revision-Date: 2016-11-03 07:15+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_supplier_catalog
+#: field:create.supplier.product,categ_id:0
+msgid "Category"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog.line,sku:0
+msgid "SKU"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog.line,delay:0
+msgid "Delivery delay"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: view:product.supplier.catalog:0
+msgid "Suppliers"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,uom_id:0
+msgid "Unit for create this product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:create.supplier.product,categ_id:0
+msgid "Category for these product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.category,compute_coeff:0
+msgid "Compute Coeff"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,ean13:0
+msgid "EAN 13"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,category_ids:0
+msgid "Categories for this product on the suppliers"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,date_eol:0
+msgid "Date when the product become at end of life"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: view:product.supplier.catalog:0
+msgid "Label"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,name:0
+msgid "Product name"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.category,code:0
+msgid "Code of the category on the supplier"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog.line,supplier_id:0
+#: help:product.supplier.catalog.line,supplier_id:0
+msgid "Supplier"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog.line,min_qty:0
+msgid "Minimum quantity to order on this supplier"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:create.supplier.product,product_id:0
+msgid "Existing product in the database"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:create.supplier.product,product_id:0
+#: field:product.supplier.catalog,product_id:0
+msgid "Product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: model:ir.model,name:product_supplier_catalog.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: model:ir.actions.act_window,name:product_supplier_catalog.act_open_product_supplier_catalog_view
+#: model:ir.ui.menu,name:product_supplier_catalog.menu_product_supplier_catalog
+#: view:product.supplier.catalog:0
+msgid "Catalogs"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: view:product.supplier.catalog:0
+#: field:product.supplier.catalog,description:0
+msgid "Description"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog.line,purchase_price:0
+msgid "our purchase price"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,description:0
+msgid "Sale description"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,public_price:0
+msgid "Public Price"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,name:0
+msgid "Name of the product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog.line,supp_cat_id:0
+#: field:product.supplier.category,supp_cat_id:0
+msgid "product catalog"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,weight:0
+msgid "Gross Weight"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: view:create.supplier.product:0
+msgid "Create or update product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog.line,code:0
+#: help:product.supplier.catalog.line,code:0
+msgid "Product supplier code"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog.line,name:0
+#: help:product.supplier.catalog.line,name:0
+msgid "Product supplier name"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: view:product.supplier.catalog:0
+#: field:product.supplier.catalog,category_ids:0
+msgid "Categories"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,manufacturer_id:0
+msgid "Manufacturer"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: model:ir.model,name:product_supplier_catalog.model_product_supplier_catalog_line
+msgid "Supplier catalog line"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,code:0
+msgid "Code of the product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.category,code:0
+msgid "Category code"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,date_eol:0
+msgid "End of life"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog.line,supp_cat_id:0
+#: help:product.supplier.category,supp_cat_id:0
+msgid "Help note"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog.line,delay:0
+msgid "Number of days to deliver the product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,manufacturer_id:0
+msgid "Manufacturer for this product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,line_ids:0
+msgid "Lines"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,ean13:0
+msgid "Barcode product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,weight_net:0
+msgid "Net weight"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,weight:0
+msgid "Gross weight"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,line_ids:0
+msgid "Supplier line"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,product_id:0
+msgid "Product link"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: model:ir.model,name:product_supplier_catalog.model_product_supplier_category
+msgid "Supplier's category"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.category,compute_coeff:0
+msgid "Compute standard price when convert product catalog on product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog.line,min_qty:0
+msgid "Min Qty"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,warranty:0
+msgid "Warranty"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: view:product.supplier.catalog:0
+msgid "Informations"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: view:create.supplier.product:0
+#: model:ir.actions.act_window,name:product_supplier_catalog.action_create_supplier_product_view
+#: model:ir.model,name:product_supplier_catalog.model_create_supplier_product
+msgid "Create supplier product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog.line,sku:0
+msgid "SKU for this supplier"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,code:0
+msgid "Product code"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,warranty:0
+msgid "Warranty for this product"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog.line,purchase_price:0
+msgid "Purchase Price"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,weight_net:0
+msgid "Net Weight"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.category,name:0
+msgid "Category name"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: view:create.supplier.product:0
+msgid "Cancel"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.catalog,public_price:0
+msgid "Public price or catalog price"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: model:ir.model,name:product_supplier_catalog.model_product_supplier_catalog
+msgid "Store catalog come from the supplier"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: field:product.supplier.catalog,uom_id:0
+msgid "Unit"
+msgstr ""
+
+#. module: product_supplier_catalog
+#: help:product.supplier.category,name:0
+msgid "name of teh category on the supplier"
+msgstr ""
+
