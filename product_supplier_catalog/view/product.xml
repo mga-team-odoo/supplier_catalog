@@ -47,21 +47,25 @@
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
                 <form string="Catalogs">
-                    <field name="name"/>
-                    <field name="code"/>
+                    <field name="name" required="1"/>
+                    <field name="code" required="1"/>
                     <field name="ean13"/>
                     <field name="uom_id"/>
                     <field name="manufacturer_id"/>
-                    <field name="weight"/>
-                    <field name="weight_net"/>
-                    <field name="date_eol"/>
-                    <field name="warranty"/>
-                    <field name="public_price"/>
-                    <field name="product_id"/>
                     <notebook colspan="4">
                         <page string="Informations">
-                            <separator string="Description" colspan="4"/>
-                            <field name="description" colspan="4" nolabel="1"/>
+                            <group colspan="4">
+                                <group>
+                                    <field name="public_price"/>
+                                    <field name="date_eol"/>
+                                    <field name="warranty"/>
+                                </group>
+                                <group>
+                                    <field name="weight"/>
+                                    <field name="weight_net"/>
+                                    <field name="product_id"/>
+                                </group>
+                            </group>
                             <separator string="Suppliers" colspan="4"/>
                             <field name="line_ids" colspan="4" nolabel="1">
                                 <tree string="Label" nolabel="1" editable="bottom">
@@ -75,9 +79,13 @@
                                 </tree>
                             </field>
                         </page>
+                        <page string="Description">
+                            <separator string="Description" colspan="4"/>
+                            <field name="description" colspan="4" nolabel="1"/>
+                        </page>
                         <page string="Categories">
                             <field name="category_ids" nolabel="1">
-                                <tree string="Categories" colspan="4" nolabel="1">
+                                <tree string="Categories" colspan="4" nolabel="1" editable="bottom">
                                     <field name="code"/>
                                     <field name="name"/>
                                 </tree>
