@@ -13,9 +13,18 @@ addons:
       - python-lxml  # because pip installation is slow
 
 env:
-  - VERSION="7.0" ODOO_REPO="odoo/odoo" LINT_CHECK="0"
-  - VERSION="7.0" ODOO_REPO="OCA/OCB" LINT_CHECK="0"
-  - VERSION="7.0" ODOO_REPO="OCA/OCB" UNIT_TEST="1" LINT_CHECK="0"
+  global:
+  - VERSION="7.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
+  - TRANSIFEX_USER='mgabot'
+  - TRANSIFEX_TEAM='66407'
+  - secure: feWbtMKQbx2l1p8lVT2g3WGhq1Elm9FJxz/Tn4y2iwCmOQDf5VrdGc4omvdtEkwqnL9kztQMdCMRSx1Lwx5THJWoVhsWZ8WUCEkX7BOA6QWR3aQdYKGICJfMn9iklpckXM1SBkholUyeucz7BdXS/94S7hZw/Yr4gIyvN3Fp9yY=
+
+  matrix:
+  - LINT_CHECK="1"
+  - UNIT_TEST
+  - TESTS="1" ODOO_REPO="odoo/odoo"
+  - TESTS="1" ODOO_REPO="OCA/OCB"
+  - TRANSIFEX="1"
 
 virtualenv:
   system_site_packages: true
@@ -23,10 +32,10 @@ virtualenv:
 install:
  - git clone https://github.com/OCA/maintainer-quality-tools.git $HOME/maintainer-quality-tools
  - export PATH=$HOME/maintainer-quality-tools/travis:$PATH
- - travis_install_nightly 7.0
+ - travis_install_nightly
 
 script:
-    - travis_run_tests 7.0
+    - travis_run_tests
 
 after_success:
     - travis_after_tests_success
