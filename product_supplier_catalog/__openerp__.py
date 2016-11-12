@@ -26,7 +26,8 @@
     'name': 'Product Supplier Catalog',
     'version': '1.0',
     'category': 'Purchase',
-    'description': """Module to import supplier catalog""",
+    'description': """Module to import suppliers catalog to create
+    in one click a product information""",
     'author': 'MIROUNGA',
     'website': 'http://www.mirounga.fr/',
     'depends': [
