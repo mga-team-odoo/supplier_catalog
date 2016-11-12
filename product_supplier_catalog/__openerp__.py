@@ -31,6 +31,7 @@
     'website': 'http://www.mirounga.fr/',
     'depends': [
         'product',
+        'product_manufacturer',
         'purchase',
     ],
     'images': [],
