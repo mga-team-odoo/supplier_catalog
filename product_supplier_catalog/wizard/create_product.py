@@ -1,28 +1,29 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    product_supplier_catalog module for OpenERP, Module to import supplier catalog
-#    Copyright (C) 2016 MIROUNGA (<http://www.mirounga.fr/>)
-#              Christophe CHAUVET <christophe.chauvet@gmail.com>
+# product_supplier_catalog module for OpenERP, Module to import supplier
+# catalog
+# Copyright (C) 2016 MIROUNGA (<http://www.mirounga.fr/>)
+#           Christophe CHAUVET <christophe.chauvet@gmail.com>
 #
-#    This file is a part of product_supplier_catalog
+# This file is a part of product_supplier_catalog
 #
-#    product_supplier_catalog is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
+# product_supplier_catalog is free software: you can redistribute it and/or
+# modify it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the License,
+# or (at your option) any later version.
 #
-#    product_supplier_catalog is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
+# product_supplier_catalog is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
 #
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
-from openerp.osv import osv
+# from openerp.osv import osv
 from openerp.osv import orm
 from openerp.osv import fields
 
@@ -45,7 +46,8 @@ class create_product(orm.TransientModel):
         lines_ids = context.get('active_ids', [])
         this = self.browse(cr, uid, ids[0], context=context)
         pro_obj = self.pool['product.product']
-        for line in self.pool['product.supplier.catalog'].browse(cr, uid, lines_ids, context=context):
+        for line in self.pool['product.supplier.catalog'].browse(
+                cr, uid, lines_ids, context=context):
             product_id = False
             if line.product_id:
                 # update
